@@ -44,7 +44,11 @@
     "url": "https://github.com/longyiyiyu/workflow/issues"
   },
   "homepage": "https://github.com/longyiyiyu/workflow#readme",
-  "dependencies": {},
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "chalk": "^2.4.1",
+    "osenv": "^0.1.5"
+  },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
     "commitizen": "^3.0.4",
