@@ -1,0 +1,63 @@
+{
+  "name": "workflow-tool-cli",
+  "version": "0.0.1",
+  "description": "A command line tool for workflow of web developer.",
+  "bin": {
+    "ww": "./bin/workflow-cli",
+    "workflow-cli": "./bin/workflow-cli"
+  },
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "commit": "git-cz"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longyiyiyu/workflow.git"
+  },
+  "keywords": [
+    "cli",
+    "workflow"
+  ],
+  "author": "longyiyiyu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longyiyiyu/workflow/issues"
+  },
+  "homepage": "https://github.com/longyiyiyu/workflow#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "commitizen": "^3.0.4",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.8.0",
+    "husky": "^1.1.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.1",
+    "standard-version": "^4.4.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
