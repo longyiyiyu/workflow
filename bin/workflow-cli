@@ -2,4 +2,6 @@
 
 'use strict';
 
-require('../lib')();
+require('../lib/cli')().then(ret => {
+  process.exit(ret || 0);
+});
