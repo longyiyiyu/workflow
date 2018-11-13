@@ -1,6 +1,6 @@
 {
   "name": "workflow-tool-cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A command line tool for workflow of web developer.",
   "bin": {
     "workflow-cli": "./bin/workflow-cli",
@@ -44,11 +44,18 @@
     "url": "https://github.com/longyiyiyu/workflow/issues"
   },
   "homepage": "https://github.com/longyiyiyu/workflow#readme",
+  "configs": {
+    "compatibleVersion": ">=0.0.2"
+  },
   "dependencies": {
     "bunyan": "^1.8.12",
     "chalk": "^2.4.1",
+    "cross-spawn": "^6.0.5",
     "figlet": "^1.2.1",
+    "ora": "^3.0.0",
     "osenv": "^0.1.5",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
     "semver": "^5.6.0"
   },
   "devDependencies": {
